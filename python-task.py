@@ -3,9 +3,13 @@
 NUMBER = 5
 
 def main():
-    NUMBER = 10 + NUMBER
-    NUMBER = add_five(add_five(NUMBER))
-    print(NUMBER)
+    try:
+        NUMBER = 10 + NUMBER
+        NUMBER = add_five(add_five(NUMBER))
+        print(NUMBER)
+    except:
+        print("An error occured.")
+
 
 def add_five(num):
     new_number = num + 5
