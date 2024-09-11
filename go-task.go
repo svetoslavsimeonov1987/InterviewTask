@@ -11,7 +11,7 @@ const number = 5
 func main() {
 	var number int64
 	number = 10 + number
-	addFive(number)
+	addFive(addFive(number))
 	fmt.Print(number, "\n")
 }
 
