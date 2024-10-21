@@ -1,15 +1,14 @@
 # Question: What will happen when you run this Python script?
 
-NUMBER = 5
-
 def main():
+    NUMBER = 2
     try:
-        NUMBER = 10 + NUMBER
-        NUMBER = add_five(add_five(NUMBER))
+        ARR = [1, 2, 3, 4, 5]
+        NUMBER = 2 + NUMBER**3 + ARR[::-1][0]
+        add_five(add_five(NUMBER))
         print(NUMBER)
     except:
         print("An error occured.")
-
 
 def add_five(num):
     new_number = num + 5
