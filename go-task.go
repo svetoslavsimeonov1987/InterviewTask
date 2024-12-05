@@ -1,21 +1,24 @@
-// Question: What will happen when you run this GO code?
-
 package main
 
 import (
 	"fmt"
+	"math"
 )
 
-const number = 5
-
 func main() {
-	var number int64
-	number = 10 + number
-	addFive(addFive(number))
-	fmt.Print(number, "\n")
+	NUMBER := 2
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("An error occurred.")
+		}
+	}()
+	ARR := []int{1, 2, 3, 4, 5}
+	NUMBER = 2 + int(math.Pow(2, 3)) + ARR[len(ARR)-1]
+	addFive(addFive(NUMBER))
+	fmt.Println(NUMBER)
 }
 
-func addFive(num int64) int64 {
+func addFive(num int) int {
 	newNumber := num + 5
 	return newNumber
 }
