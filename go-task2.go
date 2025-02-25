@@ -8,8 +8,11 @@ import (
 func main() {
 	NUMBER := 2
 	ARR := []int{1, 2, 3, 4, 5}
+	
 	addFive(addFive(NUMBER))
-	NUMBER = 2 + int(math.Pow(2, 3)) + ARR[len(ARR)]
+	fmt.Println(NUMBER)
+	
+	NUMBER += int(math.Pow(2, 3)) + ARR[len(ARR)]
 	fmt.Println(NUMBER)
 }
 
