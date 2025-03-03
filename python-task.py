@@ -4,7 +4,7 @@ def main():
     NUMBER = 2
     try:
         ARR = [1, 2, 3, 4, 5]
-        NUMBER = 2 + NUMBER**3 + ARR[::-1][0]
+        NUMBER += NUMBER**3 + ARR[::-1][0]
         add_five(add_five(NUMBER))
         print(NUMBER)
     except:
