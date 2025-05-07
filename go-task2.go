@@ -10,7 +10,6 @@ func main() {
 	ARR := []int{1, 2, 3, 4, 5}
 	
 	addFive(addFive(NUMBER))
-	fmt.Println(NUMBER)
 	
 	NUMBER += int(math.Pow(2, 3)) + ARR[len(ARR)]
 	fmt.Println(NUMBER)
